@@ -25,6 +25,31 @@ const config = {
         "2xl": "1400px",
       },
     },
+    bgColor:{
+      'yellow':'#fefce8'
+
+    },
+    margin: {
+      'auto': '0 auto',
+      '5':'5px',
+      '10':'10px',
+      '30':'30px',
+      '50':'50px',
+      '100':'100px',
+      '130':'130px',
+      '150':'150px',
+      '220':'220px',
+      '200':'200px',
+      '320':'320px',
+      '550': '550px',
+      '600': '600px',
+      '650': '650px',
+      '700': '700px',
+      '750': '750px',
+      '800': '800px',
+      'custom': '2.75rem',
+    },
+   
     extend: {
       colors: {
         black: {
@@ -81,6 +106,7 @@ const config = {
         },
       },
       borderRadius: {
+        
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
@@ -179,7 +205,7 @@ const config = {
           }),
           "bg-grid-small": (value: any) => ({
             backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
             )}")`,
           }),
           "bg-dot": (value: any) => ({
