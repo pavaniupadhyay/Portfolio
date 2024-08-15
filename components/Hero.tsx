@@ -13,7 +13,7 @@ const Hero = () => {
 
       </div>
       
-      <div className=" mr-800 mt-100"> 
+      <div className=" mr-900 mt-100"> 
     <GlareCard className="mr-550">
     <svg
       width="66"
@@ -31,15 +31,19 @@ const Hero = () => {
         strokeLinecap="round"
       />
     </svg>
+    <div>
+      <h1 className=" flex justify-end mr-100 text-3xl font-bold text-white">Welcome to our website</h1>
+    </div>
    <img src={img4.src} alt="image " className="h-90" />    
+
+   
    
   </GlareCard>
-  <div  >
- 
-  </div>
-  </div>
   
-  </div>
+    </div>
+    <div>
+      </div>
+   </div>
 
   )
 }   
