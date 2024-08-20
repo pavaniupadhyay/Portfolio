@@ -1,17 +1,17 @@
 import React from 'react';
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards';
-import html from "@/public/html.jpg";
-import css from "@/public/css.png";
-import js from "@/public/javascript.png";
-import express from "@/public/express.png";
-import mongodb from "@/public/mongodb.jpeg";
-import postgresql from "@/public/postgres.jpg";
-import react from "@/public/react.png";
-import typescript from "@/public/typescript.jpeg";
-import git from "@/public/R.jpeg";
-import aws from "@/public/AWS.jpeg";
-import nodejs from "@/public/nodejs.jpeg";
-import docker from "@/public/docker.png";
+import html1 from "@/public/html1.png";
+import css2 from "@/public/css2.png";
+import js1 from "@/public/javascript1.png";
+import express from "@/public/express1.png";
+import mongodb from "@/public/mongodb1.png";
+import postgresql from "@/public/postgres1.png";
+import react from "@/public/react1.png";
+import typescript from "@/public/typescript1.png";
+import git from "@/public/git1.png";
+import aws from "@/public/AWS1.png";
+import nodejs from "@/public/nodejs1.png";
+import docker from "@/public/docker1.png";
 import { projects } from '@/data';
 import { title } from 'process';
 import { FaLocationArrow } from 'react-icons/fa';
@@ -30,28 +30,28 @@ const MovingCards = () => {
               quote: "html",
               name: " ",
               title: "",
-              image: html.src,
+              image: html1.src,
               bgColor: "#00a3ff",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-10 h-10 mt-10"
             },
             {
               quote: "css",
               name: "",
               title: "",
-              image: css.src,
+              image: css2.src,
               bgColor: "#ff58ea",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "js",
               name: "",
               title: "",
-              image: js.src,
+              image: js1.src,
               bgColor: "#00af6f",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "nodejs",
@@ -60,7 +60,7 @@ const MovingCards = () => {
               image: nodejs.src,
               bgColor: "#ff791f",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "express",
@@ -69,7 +69,7 @@ const MovingCards = () => {
               image: express.src,
               bgColor: "#00a3ff",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "mongo",
@@ -78,7 +78,7 @@ const MovingCards = () => {
               image: mongodb.src,
               bgColor: "#ff58ea",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "react",
@@ -87,7 +87,7 @@ const MovingCards = () => {
               image: react.src,
               bgColor: "#00af6f",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "typescript",
@@ -96,7 +96,7 @@ const MovingCards = () => {
               image: typescript.src,
               bgColor: "#00a3ff",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "postgres",
@@ -105,7 +105,7 @@ const MovingCards = () => {
               image: postgresql.src,
               bgColor: "#ff791f",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "giy",
@@ -114,7 +114,7 @@ const MovingCards = () => {
               image: git.src,
               bgColor: "#ff58ea",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "aws",
@@ -123,7 +123,7 @@ const MovingCards = () => {
               image: aws.src,
               bgColor: "#00af6f",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
             {
               quote: "docker",
@@ -132,19 +132,14 @@ const MovingCards = () => {
               image: docker.src,
               bgColor: "#00a3ff",
               textColor: "#000000",
-              imageClasses: ""
+              imageClasses: "rounded-lg shadow-md w-20 h-20"
             },
           ]}
         />
       </div>
 
       <div className="py-20 ">
-  <h1 className="heading">
-    A Small Section of{' '}
-    <span className="text-blue-200">
-      recent project
-    </span>
-  </h1>
+      <h1 className=" flex justify-end mr-500 text-6xl font-bold italic text-white">Recent projects </h1>
 </div>
 
 <div className="flex flex-wrap justify-center gap-20 gap-y-1 mt-20 ">

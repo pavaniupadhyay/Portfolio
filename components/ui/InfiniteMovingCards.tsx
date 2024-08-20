@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
-  speed = "fast",
+  speed = "normal",
   pauseOnHover = true,
   className,
 }: {
@@ -17,7 +17,7 @@ export const InfiniteMovingCards = ({
     image?: string; // Optional image property
     bgColor?: string; // Optional background color property
     textColor?: string; // Optional text color property
-    imageClasses:string;
+    imageClasses?: string; // Optional custom classes for image
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -71,7 +71,7 @@ export const InfiniteMovingCards = ({
       if (speed === "fast") {
         containerRef.current.style.setProperty("--animation-duration", "20s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+        containerRef.current.style.setProperty("--animation-du   ration", "40s");
       } else {
         containerRef.current.style.setProperty("--animation-duration", "80s");
       }
@@ -82,7 +82,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -101,13 +101,18 @@ export const InfiniteMovingCards = ({
               background: item.bgColor
                 ? item.bgColor
                 : "linear-gradient(180deg, var(--slate-800), var(--slate-900))",
-              backgroundImage: item.image ? `url(${item.image})` : "none",
-              backgroundSize: "cover", // Cover the entire card with the image
-              backgroundPosition: "center", // Center the image
               color: item.textColor || "inherit", // Apply custom text color
             }}
             key={idx}
           >
+            {/* Image inside the card with custom classes */}
+            {item.image && (
+              <img
+                src={item.image}
+                alt={item.quote}
+                className={`object-cover ${item.imageClasses} w-full h-auto`}
+              />
+            )}
             <blockquote>
               <div
                 aria-hidden="true"
