@@ -5,8 +5,8 @@ import { FloatingNav } from "@/components/ui/FloatingNav";
 import MoveingCards from "@/components/MoveingCards";
 import RecentProject from "@/components/RecentProject";
 import Experiance from "@/components/Experiance";
-
-
+import About from "@/components/About"
+import Contect from "@/components/contect";
 
 
 export default function Home() {
@@ -18,6 +18,8 @@ export default function Home() {
       <MoveingCards/>
       <RecentProject/>
       <Experiance/>
+      <About/>
+      <Contect/>
       </div> 
       </main>
   );
