@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Random Grotesque';
+  src: url('/path-to-your-font/random-grotesque.woff2') format('woff2'),
+       url('/path-to-your-font/random-grotesque.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 .dm-serif-text-regular {
   font-family: "DM Serif Text", serif;
   font-weight: 400;

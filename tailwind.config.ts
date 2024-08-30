@@ -55,9 +55,16 @@ const config = {
       '800': '800px',
       '850':'850px',
       '900': '900px',
+      '950': '950px',
+      '1000': '1000px',
+      '1050': '1050px',
+      '1100': '1100px',
       'custom': '2.75rem',
     },
-   
+   height:{
+    'auto': 'auto',
+    "120":"500px"
+   },
     extend: {
       colors: {
         black: {

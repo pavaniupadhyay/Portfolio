@@ -6,7 +6,7 @@ import MoveingCards from "@/components/MoveingCards";
 import RecentProject from "@/components/RecentProject";
 import Experiance from "@/components/Experiance";
 import About from "@/components/About"
-import Contect from "@/components/contect";
+import Contect from "@/components/Contect";
 
 
 export default function Home() {
