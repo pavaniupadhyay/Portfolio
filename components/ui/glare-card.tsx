@@ -68,7 +68,7 @@ export const GlareCard = ({
   return (
     <div
       style={containerStyle}
-      className="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform w-[320px] [aspect-ratio:17/21]"
+      className="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform w-[600px] [aspect-ratio:17/21]"
       ref={refElement}
       onPointerMove={(event) => {
         const rotateFactor = 0.1;
@@ -117,9 +117,9 @@ export const GlareCard = ({
         }
       }}
     >
-      <div className="h-full grid will-change-transform origin-center transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-calc(var(--radius) - 4px)   hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none overflow-hidden md:w-[1200px] md:h-[530px] [clip-path:inset(0_0_0_0_round_var(--radius))] ">
+      <div className="h-full grid will-change-transform origin-center transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-calc(var(--radius) - 4px)   hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none overflow-hidden md:w-[1200px] md:h-[530px] h-[600px] [clip-path:inset(0_0_0_0_round_var(--radius))] ">
         <div className="w-full h-full grid [grid-area:1/1] mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))]">
-          <div className={cn("h-full w-full bg-blue-500", className)}>
+          <div className={cn("h-9 w-full bg-blue-500", className)}>
             {children}
           </div>
         </div>

@@ -19,7 +19,7 @@ const Hero = () => {
     <div className="h-screen w-full dark:bg-grid-small-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-      <div className="mr-900 mt-50">
+      <div className="mr-650 mt-100">
       <div className=" grid grid-cols-4 gap-4 p-3">
      <a href="#" className="text-white font-extrabold hover:text-gray-400"></a>
   <a href="#" className="text-white font-extrabold hover:text-gray-400"></a>

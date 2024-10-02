@@ -32,7 +32,7 @@ const MovingCards = () => {
     <div className="h-screen w-full dark:bg-grid-small-white/[0.2] bg-grid-black/[0.2] relative flex flex-col items-center justify-center">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-      <div className="mt-900"> {/* Negative top margin to move components higher */}
+      <div className="mt-5"> {/* Negative top margin to move components higher */}
       <InfiniteMovingCards
   items={[
     {
@@ -159,14 +159,14 @@ const MovingCards = () => {
   </h1>
 </div>
 <div className={roboto.className}>
-<div className="flex flex-wrap justify-center gap-20 gap-y-1 mt-20 mb-50 ">
+<div className="flex flex-wrap justify-center gap-20 gap-y-1 mt-5 mb-50 ">
   {projects.map((item) => (
     <div
       className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
       key={item.id}
     >
       <PinContainer title="" href="">
-        <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+        <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-5">
           <div
             className="relative w-full h-full overflow-hidden lg:rounded-3xl"
             style={{ backgroundColor: "#13162D" }}
