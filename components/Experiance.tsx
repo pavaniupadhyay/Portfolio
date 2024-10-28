@@ -79,7 +79,7 @@ const Experiance = () => {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] ">
 
       </div>
-      <div className="w-full mt-200">
+      <div className="w-full mt-5 mb-1050">
       <Timeline data={data} />
     </div>
       </div>

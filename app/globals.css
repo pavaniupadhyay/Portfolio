@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @font-face {
+  font-family:Super_Shiny ;
+  src: url("/public/fonts/super_shiny.zip") format("zip");
+}
+@font-face {
+  font-family:fancake ;
+  src: url("/public/fonts/fancake.zip") format("zi[");
+}
+@font-face {
   font-family: 'Random Grotesque';
   src: url('/path-to-your-font/random-grotesque.woff2') format('woff2'),
        url('/path-to-your-font/random-grotesque.woff') format('woff');

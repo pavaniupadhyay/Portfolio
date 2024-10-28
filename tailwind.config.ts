@@ -29,6 +29,7 @@ const config = {
       'yellow':'#fefce8'
 
     },
+
    
     margin: {
       'auto': '0 auto',
@@ -65,6 +66,7 @@ const config = {
     'auto': 'auto',
     "120":"500px"
    },
+   
     extend: {
       colors: {
         black: {
@@ -73,6 +75,7 @@ const config = {
           200: "rgba(17, 25, 40, 0.75)",
           300: "rgba(255, 255, 255, 0.125)",
         },
+      
         white: {
           DEFAULT: "#FFF",
           100: "#BEC1DD",

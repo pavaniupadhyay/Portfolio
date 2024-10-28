@@ -4,14 +4,7 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import { Nerko_One} from "@next/font/google"
 import { Bungee } from "@next/font/google"
-const nerko_one = Nerko_One({
-  subsets: ['latin'],
-  weight: "400",
-});
-const bungee  = Bungee({
-  subsets: ['latin'],
-  weight: "400",
-});
+
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
@@ -125,9 +118,9 @@ export const InfiniteMovingCards = ({
                     className={`object-cover mr-4 ${item.imageClasses}`}
                   />
                 )}
-                <div className={nerko_one.className}>
+                <div >
                   <div className="flex flex-col items-end  ">
-                  <span className="text-2xl leading-[1.6] font-bold text-white mb-2 mr-5">
+                  <span className="text-2xl leading-[1.6] text-white mb-2 mr-5">
                     {item.quote}
                   </span>
                   <div className="mt-2 flex flex-col items-end">

@@ -47,7 +47,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className={nerko_one.className}>
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 mt-550">
+      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 mt-5">
         <h2 className="text-lg md:text-7xl mb-4 text-yellow-50  max-w-4xl">
           My Expireance
         </h2>
@@ -56,7 +56,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </p>
       </div>
 </div>
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-7xl mx-auto pb-2">
         {data.map((item, index) => (
           <div
             key={index}

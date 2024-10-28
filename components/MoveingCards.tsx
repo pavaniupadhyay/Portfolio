@@ -29,10 +29,10 @@ const nerko_one = Nerko_One({
 
 const MovingCards = () => {
   return (
-    <div className="h-screen w-full dark:bg-grid-small-white/[0.2] bg-grid-black/[0.2] relative flex flex-col items-center justify-center">
+    <div className="h-screen w-full dark:bg-grid-small-white/[0.2] bg-grid-black/[0.2] relative flex flex-col items-center justify-center  ">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-      <div className="mt-5"> {/* Negative top margin to move components higher */}
+      <div className=""> {/* Negative top margin to move components higher */}
       <InfiniteMovingCards
   items={[
     {
@@ -169,7 +169,7 @@ const MovingCards = () => {
         <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-5">
           <div
             className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-            style={{ backgroundColor: "#13162D" }}
+            style={{ backgroundColor: "#00a3ff" }}
           >
             <img src="" alt="" />
           </div>
@@ -209,6 +209,7 @@ const MovingCards = () => {
           </div>
         </div>
       </PinContainer>
+      
     </div>
   ))}
   </div>
