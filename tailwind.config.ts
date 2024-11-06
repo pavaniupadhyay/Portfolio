@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 const svgToDataUri = require("mini-svg-data-uri");
 
@@ -68,14 +69,18 @@ const config = {
    },
    
     extend: {
-      colors: {
+      fontFamily: {
+        'super-shiny': ['"Super Shiny"', 'cursive'], // Add your custom font here
+      },
+      
+  colors: {
         black: {
           DEFAULT: "#000",
           100: "#000319",
           200: "rgba(17, 25, 40, 0.75)",
           300: "rgba(255, 255, 255, 0.125)",
         },
-      
+       
         white: {
           DEFAULT: "#FFF",
           100: "#BEC1DD",

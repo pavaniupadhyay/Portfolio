@@ -4,11 +4,23 @@
 
 @font-face {
   font-family:Super_Shiny ;
-  src: url("/public/fonts/super_shiny.zip") format("zip");
+  src: url("") format("zip");
 }
+/* styles/globals.css */
+@font-face {
+  font-family: "Super Shiny";
+  src: url("/public/fonts/super_shiny.zip") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face {
   font-family:fancake ;
-  src: url("/public/fonts/fancake.zip") format("zi[");
+  src: url("/public/fonts/fancake.zip") format("zip");
+}
+@font-face {
+  font-family:random-grotesque ;
+  src: url("/public/fonts/random-grotesque.slim-black-italic.ttf") format('ttf');
 }
 @font-face {
   font-family: 'Random Grotesque';

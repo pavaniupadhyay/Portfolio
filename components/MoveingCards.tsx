@@ -152,9 +152,9 @@ const MovingCards = () => {
 />
 
       </div>
-<div className={nerko_one.className}>
+<div className="">
 <div className="text-center p-10 grid grid-cols-1 ">
-  <h1 className="text-white italic text-5xl md:text-7xl font-bold tracking-wide leading-tight mt-65">
+  <h1 className="text-white font-super-shiny font-extrabold text-5xl md:text-7xl  tracking-wide leading-tight mt-65">
     Recent projects
   </h1>
 </div>
