@@ -1,3 +1,14 @@
+import zoom from "@/public/Screenshot 2024-10-26 015532.png"
+import medium from "@/public/Screenshot 2024-12-12 005542.png"
+import Chatapp from "@/public/Screenshot 2024-12-18 051507.png"
+import portfolio from "@/public/Screenshot 2024-12-18 053649.png"
+import typescript from "@/public/typescript.png"
+import nextjs from "@/public/nj.webp"
+import mui from "@/public/mui.png"
+import hono from "@/public/hono.jpeg"
+import prisma from "@/public/prisma.png"
+import clouldflare from "@/public/clould.png"
+import ps from "@/public/postgres1.png"
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -72,31 +83,33 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "",
+    title: "Zoom-Clone",
+
     des: "",
-    img: "",
-    iconLists: [""],
+    img: zoom.src,
+    iconLists: [typescript.src,mui.src,nextjs.src],
     link: "",
+    
   },
   {
     id: 2,
-    title: "",
+    title: "Medium",
     des: "",
-    img: "",
-    iconLists: [""],
+    img:medium.src,
+    iconLists: [clouldflare.src,hono.src,prisma.src,ps.src],
     link: "",
   },
   {
     id: 3,
-    title: "",
+    title: "Chat-App",
     des: "",
-    img: "",
+    img: Chatapp.src,
     iconLists: [""],
     link: "",
   },
   {
     id: 4,
-    title: "",
+    title: "Personal-Portfolio",
     des: "",
     img: "",
     iconLists: [""],
@@ -104,17 +117,17 @@ export const projects = [
   },
   {
     id: 5,
-    title: "",
+    title: "Personal-Portfolio",
     des: "",
-    img: "",
+    img: portfolio.src,
     iconLists: [""],
     link: "",
   },
   {
-    id: 6,
-    title: "",
+    id: 2,
+    title: "comeing soon...",
     des: "",
-    img: "",
+    img:"",
     iconLists: [""],
     link: "",
   },

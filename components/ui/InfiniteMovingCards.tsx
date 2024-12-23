@@ -2,9 +2,16 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import { Nerko_One} from "@next/font/google"
-import { Bungee } from "@next/font/google"
+import { Lato } from "next/font/google";
+import { Bungee, Caveat, Courgette, Lilita_One, Nerko_One, Teko } from "@next/font/google";
 
+const lato = Lato({ subsets: ["latin"], weight: "400" });
+const Nerko_one = Nerko_One({ subsets: ['latin'], weight: "400" });
+const bungee = Bungee({ subsets: ['latin'], weight: "400" });
+const teko = Teko({ subsets: ['latin'], weight: "400" });
+const caveat = Caveat({ subsets: ['latin'], weight: "400" });
+const lilita_one = Lilita_One({ subsets: ['latin'], weight: "400" });
+const courgette = Courgette({ subsets: ['latin'], weight: "400" });
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
@@ -17,11 +24,11 @@ export const InfiniteMovingCards = ({
     name: string;
     title: string;
     image?: string; // Optional image property
+    imageSize?: string; // New: Size property for image (e.g., "h-16 w-16")
+    imageMargin?: string; // New: Margin property for image (e.g., "mr-4")
     bgColor?: string; // Optional background color property
     textColor?: string; // Optional text color property
     imageClasses?: string; // Optional custom classes for image
-    text?: string;
-    textPosition?: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -31,11 +38,11 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
+  const [start, setStart] = useState(false);
+
   useEffect(() => {
     addAnimation();
   }, []);
-
-  const [start, setStart] = useState(false);
 
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -48,37 +55,22 @@ export const InfiniteMovingCards = ({
         }
       });
 
-      getDirection();
-      getSpeed();
+      setAnimationProperties();
       setStart(true);
     }
   }
 
-  const getDirection = () => {
+  const setAnimationProperties = () => {
     if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards"
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse"
-        );
-      }
-    }
-  };
+      containerRef.current.style.setProperty(
+        "--animation-direction",
+        direction === "left" ? "forwards" : "reverse"
+      );
 
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
+      containerRef.current.style.setProperty(
+        "--animation-duration",
+        speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s"
+      );
     }
   };
 
@@ -109,37 +101,42 @@ export const InfiniteMovingCards = ({
             }}
             key={idx}
           >
-            <div className="flex flex-col items-start">
-              <blockquote className="flex items-center justify-between w-full">
-                {item.image && (
-                  <img
-                    src={item.image}
-                    alt={item.quote}
-                    className={`object-cover mr-4 ${item.imageClasses}`}
-                  />
-                )}
-                <div >
-                  <div className="flex flex-col items-end  ">
-                  <span className="text-2xl leading-[1.6] text-white mb-2 mr-5">
-                    {item.quote}
-                  </span>
-                  <div className="mt-2 flex flex-col items-end">
-                    <span className="text-sm leading-[1.6] font-normal">
-                      {item.name}
-                    </span>
-                    <span className="text-sm leading-[1.6] font-normal">
-                      {item.title}
-                    </span>
+            <div className={teko.className} >
+              <div className="flex flex-col items-start">
+                <blockquote className="flex items-center justify-between   /w-full">
+                  {item.image && (
+                    <img
+                      src={item.image}
+                      alt={item.quote}
+                      className={cn(
+                        "object-cover",
+                        item.imageSize || "h-16 w-16", // Apply custom image size
+                        item.imageMargin || "mr-4", // Apply custom margin
+                        item.imageClasses
+                      )}
+                    />
+                  )}
+                  <div>
+                    <div className="flex flex-col items-end">
+                      <span className="text-4xl pr-8 leading-[1.6] text-white mb-2 mr-5">
+                        {item.quote}
+                      </span>
+                      <div className="mt-2 flex flex-col items-end">
+                        <span className="text-sm leading-[1.6] font-normal">
+                          {item.name}
+                        </span>
+                        <span className="text-sm leading-[1.6] font-normal">
+                          {item.title}
+                        </span>
+                      </div>
                     </div>
-
                   </div>
-                </div>
-              </blockquote>
+                </blockquote>
+              </div>
             </div>
           </li>
         ))}
       </ul>
     </div>
-    
   );
 };

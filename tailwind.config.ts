@@ -70,7 +70,8 @@ const config = {
    
     extend: {
       fontFamily: {
-        'super-shiny': ['"Super Shiny"', 'cursive'], // Add your custom font here
+        supershiny: ['" supershiny"', 'cursive'], // Add your custom font here
+        coffeespark:[' "coffeespark"','cursive']
       },
       
   colors: {

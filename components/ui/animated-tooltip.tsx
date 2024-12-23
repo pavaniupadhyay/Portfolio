@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import React, { useState } from "react";
 import {
@@ -17,7 +18,8 @@ export const AnimatedTooltip = ({
     name: string;
     designation: string;
     image: string;
-    color: string; // Add color property
+    color: string;
+    link: string; // Added link property for redirection
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -38,11 +40,19 @@ export const AnimatedTooltip = ({
 
   return (
     // Wrapper div to make the circles fixed
-    <div style={{ position: "fixed", top: "85%", right: "15px", transform: "translateY(-50%)", zIndex: 50 }}>
+    <div
+      style={{
+        position: "fixed",
+        top: "85%",
+        right: "15px",
+        transform: "translateY(-50%)",
+        zIndex: 50,
+      }}
+    >
       {items.map((item, idx) => (
         <div
-          className="-mr-4 relative group mb-4" // mb-4 for spacing between circles
-          key={item.name}
+          className="-mr-4 relative group mb-4"
+          key={item.id}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -77,8 +87,13 @@ export const AnimatedTooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          <div
-            className="h-14 w-14 rounded-full border-2 border-white relative transition duration-500 group-hover:scale-105 group-hover:z-30"
+
+          {/* Link wrapping the circle */}
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-14 w-14 rounded-full border-2 border-white relative transition duration-500 group-hover:scale-105 group-hover:z-30 block"
             style={{ backgroundColor: item.color }}
           >
             <Image
@@ -89,7 +104,7 @@ export const AnimatedTooltip = ({
               alt={item.name}
               className="object-cover rounded-full h-full w-full"
             />
-          </div>
+          </a>
         </div>
       ))}
     </div>

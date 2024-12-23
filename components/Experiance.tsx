@@ -1,6 +1,15 @@
-import React from 'react'
+/* Import statements */
+import React from 'react';
 import { Timeline } from './ui/timeline';
-import { Nerko_One } from "@next/font/google"
+import { Bungee, Caveat, Courgette, Lato, Lilita_One, Nerko_One, Teko } from "@next/font/google";
+import { GlareCard2 } from './Glarecard-two';
+import { ContainerScroll } from './ui/container-scroll-animation';
+const lato =Lato({ subsets: ["latin"], weight: "400" });
+const bungee = Bungee({ subsets: ['latin'], weight: "400" });
+const teko = Teko({ subsets: ['latin'], weight: "400" });
+const caveat = Caveat({ subsets: ['latin'], weight: "400" });
+const lilita_one = Lilita_One({ subsets: ['latin'], weight: "400" });
+const courgette = Courgette({ subsets: ['latin'], weight: "400" });
 
 const nerko_one = Nerko_One({
   subsets: ['latin'],
@@ -12,8 +21,8 @@ const Experiance = () => {
     {
       title: "2023",
       content: (
-        <div>
-          <p className="text-yellow-200 text-xs md:text-4xl mb-8">
+        <div className={bungee.className}>
+          <p className="text-yellow-200 text-5xl md:text-4xl mb-8">
             Web Development Internship
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-2xl font-normal mb-8">
@@ -34,7 +43,7 @@ const Experiance = () => {
     {
       title: "2024",
       content: (
-        <div>
+        <div className={bungee.className}>
           <p className="text-yellow-200 text-xs md:text-4xl mb-8">
             Android Development Internship
           </p>
@@ -61,17 +70,67 @@ const Experiance = () => {
   return (
     <div className="h-screen w-full dark:bg-grid-small-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      
+      <div>
+        {/* Timeline Section */}
+        <div className="w-full mt-1 mb-10">
+          <Timeline data={data} />
+        </div>
 
-      <div className="w-full mt-5 mb-1050">
-        <Timeline data={data} />
-      </div>
+        <div className="mt-60">
+      <ContainerScroll
+            titleComponent={
+            <></>
+          } children={
+            <div className="bo flex flex-col items-center justify-center">
+              <div className="face relative">
+                <div className="earL"></div>
+                <div className="earR"></div>
+                <div className="eyeL"></div>
+                <div className="eyeR"></div>
+                <div className="hairs"></div>
+                <div className="nose"></div>
+                <div className="mouth"></div>
+{/* Smile Left */}
+<div className="smileL">
+                  <svg xmlSpace="preserve" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+                    <filter id="blurMe">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+                    </filter>
+                    <path d="M25 19c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                    <path d="M35 35c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                    <path d="M45 50c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                  </svg>
+                </div>
+ {/* Smile Right */}
+ <div className="smileR">
+                  <svg xmlSpace="preserve" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+                    <filter id="blurMe">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+                    </filter>
+                    <path d="M25 19c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                    <path d="M35 35c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                    <path d="M45 50c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                  </svg>
+                </div>
+ {/* Snow */}
+ <div className="snow">
+                  <div className="mountain-cap-1"></div>
+                  <div className="mountain-cap-2"></div>
+                  <div className="mountain-cap-3"></div>
+                  <div className="mountain-cap-4"></div>
+                </div>
+              </div>
+            </div>
 
-      {/* Place the "hiiiiiiiiiiiiiiiiii" text below the timeline */}
-      <div className="flex justify-start mt-4">
-        <p className="text-neutral-800 dark:text-neutral-200">hiiiiiiiiiiiiiiiiii</p>
+
+          }      >
+      
+      </ContainerScroll>
+    </div>
+    
       </div>
     </div>
-  )
-}
-
-export default Experiance
+  );
+};
+export default Experiance;
