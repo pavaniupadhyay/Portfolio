@@ -1,20 +1,19 @@
 /* Import statements */
 import React from 'react';
 import { Timeline } from './ui/timeline';
-import { Bungee, Caveat, Courgette, Lato, Lilita_One, Nerko_One, Teko } from "@next/font/google";
+import { Bungee, Caveat, Courgette, Lato, Lilita_One, Nerko_One, Rubik_Vinyl, Teko } from "@next/font/google";
 import { GlareCard2 } from './Glarecard-two';
 import { ContainerScroll } from './ui/container-scroll-animation';
-const lato =Lato({ subsets: ["latin"], weight: "400" });
+import { AnimatedModalDemo } from './ui/button';
+
+const lato = Lato({ subsets: ["latin"], weight: "400" });
 const bungee = Bungee({ subsets: ['latin'], weight: "400" });
 const teko = Teko({ subsets: ['latin'], weight: "400" });
 const caveat = Caveat({ subsets: ['latin'], weight: "400" });
 const lilita_one = Lilita_One({ subsets: ['latin'], weight: "400" });
 const courgette = Courgette({ subsets: ['latin'], weight: "400" });
-
-const nerko_one = Nerko_One({
-  subsets: ['latin'],
-  weight: "400",
-});
+const rubik_Vinyl = Rubik_Vinyl({ subsets: ['latin'], weight: "400" });
+const nerko_one = Nerko_One({ subsets: ['latin'], weight: "400" });
 
 const Experiance = () => {
   const data = [
@@ -78,59 +77,72 @@ const Experiance = () => {
         </div>
 
         <div className="mt-60">
-      <ContainerScroll
+          <ContainerScroll
             titleComponent={
-            <></>
-          } children={
-            <div className="bo flex flex-col items-center justify-center">
-              <div className="face relative">
-                <div className="earL"></div>
-                <div className="earR"></div>
-                <div className="eyeL"></div>
-                <div className="eyeR"></div>
-                <div className="hairs"></div>
-                <div className="nose"></div>
-                <div className="mouth"></div>
-{/* Smile Left */}
-<div className="smileL">
-                  <svg xmlSpace="preserve" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
-                    <filter id="blurMe">
-                      <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
-                    </filter>
-                    <path d="M25 19c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
-                    <path d="M35 35c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
-                    <path d="M45 50c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
-                  </svg>
+              <></>
+            }
+            children={
+              <div className="bo flex flex-row items-center justify-start ml-10 mt-65">
+                {/* Bo's face */}
+                <div className="face relative mr-5">
+                  <div className="earL"></div>
+                  <div className="earR"></div>
+                  <div className="eyeL"></div>
+                  <div className="eyeR"></div>
+                  <div className="hairs"></div>
+                  <div className="nose"></div>
+                  <div className="mouth"></div>
+                  {/* Smile Left */}
+                  <div className="smileL">
+                    <svg xmlSpace="preserve" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+                      <filter id="blurMe">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+                      </filter>
+                      <path d="M25 19c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                      <path d="M35 35c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                      <path d="M45 50c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                    </svg>
+                  </div>
+                  {/* Smile Right */}
+                  <div className="smileR">
+                    <svg xmlSpace="preserve" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+                      <filter id="blurMe">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+                      </filter>
+                      <path d="M25 19c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                      <path d="M35 35c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                      <path d="M45 50c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
+                    </svg>
+                  </div>
+                  {/* Snow */}
+                  <div className="snow">
+                    <div className="mountain-cap-1"></div>
+                    <div className="mountain-cap-2"></div>
+                    <div className="mountain-cap-3"></div>
+                    <div className="mountain-cap-4"></div>
+                  </div>
                 </div>
- {/* Smile Right */}
- <div className="smileR">
-                  <svg xmlSpace="preserve" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
-                    <filter id="blurMe">
-                      <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
-                    </filter>
-                    <path d="M25 19c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
-                    <path d="M35 35c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
-                    <path d="M45 50c-6 2-12 4-18 5-2 0-4-2-6-3 1-1 2-3 3-4 11-3 22-7 32-10 2-1 4 1 6 2-1 1-2 4-3 4-4 2-9 4-14 6z" fill="#EF7F71" filter="url(#blurMe)"></path>
-                  </svg>
-                </div>
- {/* Snow */}
- <div className="snow">
-                  <div className="mountain-cap-1"></div>
-                  <div className="mountain-cap-2"></div>
-                  <div className="mountain-cap-3"></div>
-                  <div className="mountain-cap-4"></div>
+                <div className={lilita_one.className}>
+                  <p className="text-pink-400 text-9xl font-bold ml-130 ">
+                    Contact Me !!
+                 </p>
+                 <p className="text-white text-4xl font-serif ml-130 mt-30">
+                  "I’ll bring the tech
+                  </p>
+                  <p className="text-white text-4xl font-serif ml-130 mt-5 mb-30">
+                  You bring the vision—let’s build your website!"
+                  </p>
+    <div className="">
+                  <AnimatedModalDemo/>
+         </div>     
                 </div>
               </div>
-            </div>
-
-
-          }      >
-      
-      </ContainerScroll>
-    </div>
-    
+            }
+          />
+        </div>
       </div>
     </div>
   );
 };
+
 export default Experiance;
