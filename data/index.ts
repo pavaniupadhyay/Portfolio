@@ -9,6 +9,8 @@ import hono from "@/public/hono.jpeg"
 import prisma from "@/public/prisma.png"
 import clouldflare from "@/public/clould.png"
 import ps from "@/public/postgres1.png"
+import payzee from "@/public/Screenshot 2025-01-07 235310.png"
+import docker from "@/public/docker1.png"
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -83,11 +85,11 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Zoom-Clone",
+    title: "Payzee",
 
     des: "",
-    img: zoom.src,
-    iconLists: [typescript.src,mui.src,nextjs.src],
+    img: payzee.src,
+    iconLists: [typescript.src,nextjs.src,prisma.src,ps.src,docker.src],
     link: "",
     
   },
@@ -100,12 +102,14 @@ export const projects = [
     link: "",
   },
   {
-    id: 3,
-    title: "Chat-App",
+    id: 1,
+    title: "Zoom-Clone",
+
     des: "",
-    img: Chatapp.src,
-    iconLists: [""],
+    img: zoom.src,
+    iconLists: [typescript.src,mui.src,nextjs.src],
     link: "",
+    
   },
   {
     id: 4,
@@ -123,14 +127,7 @@ export const projects = [
     iconLists: [""],
     link: "",
   },
-  {
-    id: 2,
-    title: "comeing soon...",
-    des: "",
-    img:"",
-    iconLists: [""],
-    link: "",
-  },
+  
   
 ];
 
