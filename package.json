@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^14.2.6",
+    "@prisma/client": "^6.2.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.24",
     "mini-svg-data-uri": "^1.4.4",

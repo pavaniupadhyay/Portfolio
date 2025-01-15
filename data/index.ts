@@ -11,6 +11,8 @@ import clouldflare from "@/public/clould.png"
 import ps from "@/public/postgres1.png"
 import payzee from "@/public/Screenshot 2025-01-07 235310.png"
 import docker from "@/public/docker1.png"
+import react from "@/public/react (1).png";
+import { link } from "fs"
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -86,50 +88,37 @@ export const projects = [
   {
     id: 1,
     title: "Payzee",
-
     des: "",
     img: payzee.src,
-    iconLists: [typescript.src,nextjs.src,prisma.src,ps.src,docker.src],
-    link: "",
-    
+    iconLists: [typescript.src, nextjs.src, prisma.src, ps.src, docker.src],
+    link: "https://github.com/pavaniupadhyay/payzee", // Updated with proper URL
   },
   {
     id: 2,
-    title: "Medium",
-    des: "",
-    img:medium.src,
-    iconLists: [clouldflare.src,hono.src,prisma.src,ps.src],
-    link: "",
-  },
-  {
-    id: 1,
-    title: "Zoom-Clone",
-
+    title: "TalkNest",
     des: "",
     img: zoom.src,
-    iconLists: [typescript.src,mui.src,nextjs.src],
-    link: "",
-    
+    iconLists: [typescript.src, mui.src, nextjs.src],
+    link: "https://zoom-clone-eight-zeta.vercel.app", // Updated with proper URL
+  },
+  {
+    id: 3,
+    title: "Scribble-Scroll",
+    des: "",
+    img: medium.src,
+    iconLists: [clouldflare.src, hono.src, prisma.src, ps.src, react.src],
+    link: "https://scribble-scroll.vercel.app", // Updated with proper URL
   },
   {
     id: 4,
     title: "Personal-Portfolio",
     des: "",
-    img: "",
-    iconLists: [""],
-    link: "",
-  },
-  {
-    id: 5,
-    title: "Personal-Portfolio",
-    des: "",
     img: portfolio.src,
     iconLists: [""],
-    link: "",
+    link: "", // You can add a link here when ready
   },
-  
-  
 ];
+
 
 export const testimonials = [
   {

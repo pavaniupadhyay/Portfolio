@@ -15,7 +15,7 @@ import docker from "@/public/docker1.png";
 import { projects } from '@/data';
 import { FaLocationArrow } from 'react-icons/fa';
 import { PinContainer } from './ui/3D-pin';
-import { Bungee, Caveat, Courgette, Lilita_One, Nerko_One, Teko } from "@next/font/google";
+import { Bungee, Caveat, Courgette,  Lilita_One,  Nerko_One, Teko } from "@next/font/google";
 import { Roboto } from "@next/font/google";
 import { Lato } from 'next/font/google';
 import { Indie_Flower } from '@next/font/google';
@@ -172,15 +172,14 @@ const MovingCards = () => {
 
       <div>
         <div className={lilita_one.className}>
-          <div>
-          <div className="text-left ml-100 p-10 mt-100">
-            <h1 className="text-blue-100 text-7xl md:text-7xl tracking-wide leading-tight">
+        <div className="text-left ml-100 p-10 mt-100">
+            <h1 className="text-blue-100 text-6xl md:text-7xl tracking-wide leading-tight ">
               Recent <span className="text-blue-400">projects</span>
             </h1>
           </div>
           </div>
           
-        </div>
+       
         <div className={roboto.className}>
           <div className="flex flex-wrap justify-center gap-20 gap-y-1 mt-5 mb-50">
             {projects.map((item) => (
@@ -188,7 +187,7 @@ const MovingCards = () => {
                 className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
                 key={item.id}
               >
-                <PinContainer title="" href="" className="bg-black-200 rounded-xl">
+                <PinContainer title="" href={item.link} className="bg-black-200 rounded-xl">
                   <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-5">
                     <div
                       className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-gray-500"
@@ -197,7 +196,7 @@ const MovingCards = () => {
                     </div>
                     <img src={item.img} alt="cover" className="z-10 absolute bottom-0" />
                   </div>
-                  <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                  <h1 className="font-bold lg:text-2xl md:text-xl text-base pl-3 line-clamp-1">
                     {item.title}
                   </h1>
                   <p
@@ -210,11 +209,11 @@ const MovingCards = () => {
                     {item.des}
                   </p>
                   <div className="flex items-center justify-between mt-7 mb-3">
-                    <div className="flex items-center">
+                    <div className="flex items-center pl-2 pb-2">
                       {item.iconLists.map((icon, index) => (
                         <div
                           key={index}
-                          className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 h-7 w-7 flex justify-center items-center"
+                          className="border border-white/[.2] rounded-full bg-black-300 lg:w-10 lg:h-10 h-7 w-7 flex justify-center items-center"
                           style={{
                             transform: `translateX(-${5 * index + 2}px)`,
                           }}

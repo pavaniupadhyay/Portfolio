@@ -72,9 +72,9 @@ export const PinPerspective = ({
   href?: string;
 }) => {
   return (
-    <motion.div className="pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
-      <div className="w-full h-full -mt-7 flex-none inset-0">
-        <div className="absolute top-0 inset-x-0 flex justify-center">
+    <motion.div className="pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500 ">
+      <div className="w-full h-full -mt-7 flex-none inset-0 sm:max-h-36 ">
+        <div className="absolute top-0 inset-x-0 flex justify-center ">
           <a
             href={href}
             target={"_blank"}
