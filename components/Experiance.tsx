@@ -47,7 +47,6 @@ const Experiance = () => {
   return (
     <div className="h-screen w-full dark:bg-grid-small-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-
       <div>
         <div className="w-full mt-1 mb-10">
           <Timeline data={data} />
@@ -55,13 +54,11 @@ const Experiance = () => {
 
         <div className="mt-16 sm:mt-60">
         <ContainerScroll
-  titleComponent={
-    <></>
-  }
+  titleComponent={<></>}
   children={
-    <div className="bo flex flex-col md:flex-row items-center justify-start ml-5 md:ml-10 mt-5 md:mt-65">
+    <div className="flex flex-col md:flex-row items-center justify-start ml-5 md:ml-10 mt-5 md:mt-10 sm:space-x-10">
       {/* Bo's face */}
-      <div className="face relative mr-5">
+      <div className="face relative mr-5 md:mr-10">
         <div className="earL"></div>
         <div className="earR"></div>
         <div className="eyeL"></div>
@@ -99,10 +96,10 @@ const Experiance = () => {
           <div className="mountain-cap-4"></div>
         </div>
       </div>
-      <div className={`${lilita_one.className} flex flex-col items-start ml-5 sm:ml-10`}>
-        <p className="text-pink-400 text-5xl sm:text-8xl  font-bold">Contact Me !!</p>
-        <p className="text-white text-2xl sm:text-4xl font-serif mt-5 sm:mt-30">"I’ll bring the tech</p>
-        <p className="text-white text-2xl sm:text-4xl font-serif mt-5 mb-5 sm:mb-30">You bring the vision—let’s build your website!"</p>
+      <div className={`${lilita_one.className} flex flex-col items-start ml-5 sm:ml-10 space-y-4 sm:space-y-8`}>
+        <p className="text-pink-400 text-3xl sm:text-8xl font-bold">Contact Me !!</p>
+        <p className="text-white text-lg sm:text-3xl  font-serif sm:mb-130">"I’ll bring the tech</p>
+        <p className="text-white text-lg sm:text-3xl font-serif mb-4 ">You bring the vision—let’s build your website!"</p>
         <div>
           <AnimatedModalDemo />
         </div>
@@ -110,6 +107,8 @@ const Experiance = () => {
     </div>
   }
 />
+
+
 
         </div>
       </div>

@@ -37,8 +37,8 @@ const Hero = () => {
           <GlareCard className="mr-10  flex flex-row items-center">
             <img src={img4.src} alt="Profile" className="h-90" />
             <div className="ml-5 text-white">
-              <h1 className="flex justify-end items-end mr-150 text-8xl mb-4">Hello!!</h1>
-              <h1 className="text-8xl ml-320 mt-30">I'm Pavani</h1>
+              <h1 className="flex justify-end items-end mr-150 text-8xl mb-4">Hyy!! There</h1>
+              <h1 className="text-8xl ml-320 mt-30">It's Pavani</h1>
               <p className="text-6xl ml-150 mb-50 mt-50">A Full Stack Developer</p>
               <button className="button-55 mb-100 ml-350" role="button" onClick={handleContactClick}>Contact Me</button>
             </div>
