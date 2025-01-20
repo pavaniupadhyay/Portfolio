@@ -12,6 +12,7 @@ import ps from "@/public/postgres1.png"
 import payzee from "@/public/Screenshot 2025-01-07 235310.png"
 import docker from "@/public/docker1.png"
 import react from "@/public/react (1).png";
+import tbc from "@/public/to be continue.jpg";
 import { link } from "fs"
 export const navItems = [
   { name: "About", link: "#about" },
@@ -111,13 +112,22 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Personal-Portfolio",
+    title: "Portfolio",
     des: "",
     img: portfolio.src,
     iconLists: [""],
     link: "", // You can add a link here when ready
   },
+  {
+    id: 5,
+    title: "To be continued",
+    des: "",
+    img: tbc.src,
+    iconLists: [""],
+    link: "", // You can add a link here when ready
+  },
 ];
+
 
 
 export const testimonials = [

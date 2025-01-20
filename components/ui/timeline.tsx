@@ -49,7 +49,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className={lilita_one.className}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 ">
-      <h1 className="text-blue-100 text-7xl md:text-7xl tracking-wide sm:ml-100 leading-tight">
+      <h1 className="text-blue-100 text-8xl  md:text-7xl tracking-wide sm:ml-100 leading-tight ml-50">
               My <span className="text-pink-200">Expierance</span>
             </h1>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
