@@ -97,7 +97,7 @@ const Experiance = () => {
         </div>
       </div>
       <div className={`${lilita_one.className} flex flex-col items-start ml-5 sm:ml-10 space-y-4 sm:space-y-8`}>
-        <p className="text-pink-400 text-9xl ml-60 sm:text-8xl font-bold">Contact Me !!</p>
+        <p className="text-pink-400 text-9xl ml-60 sm:text-x9l font-bold">Contact Me !!</p>
         <p className="text-white text-lg sm:text-3xl ml-60 font-serif sm:mb-130">"I’ll bring the tech</p>
         <p className="text-white text-lg sm:text-3xl ml-60 font-serif mb-4 ">You bring the vision—let’s build your website!"</p>
         <div>
