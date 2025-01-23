@@ -124,7 +124,7 @@ export const projects = [
     des: "",
     img: tbc.src,
     iconLists: [""],
-    link: "", // You can add a link here when ready
+    link: "https://github.com/pavaniupadhyay/Portfolio", // You can add a link here when ready
   },
 ];
 
