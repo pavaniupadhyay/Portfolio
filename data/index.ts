@@ -115,7 +115,7 @@ export const projects = [
     title: "Portfolio",
     des: "",
     img: portfolio.src,
-    iconLists: [""],
+    iconLists: [nextjs.src, mui.src],
     link: "", // You can add a link here when ready
   },
   {
