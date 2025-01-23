@@ -12,7 +12,7 @@ import ps from "@/public/postgres1.png"
 import payzee from "@/public/Screenshot 2025-01-07 235310.png"
 import docker from "@/public/docker1.png"
 import react from "@/public/react (1).png";
-import tbc from "@/public/to be continue.jpg";
+import tbc from "@/public/continue.jpg";
 import { link } from "fs"
 export const navItems = [
   { name: "About", link: "#about" },

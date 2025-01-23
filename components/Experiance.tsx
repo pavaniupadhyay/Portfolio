@@ -6,14 +6,10 @@ import { GlareCard2 } from './Glarecard-two';
 import { ContainerScroll } from './ui/container-scroll-animation';
 import { AnimatedModalDemo } from './ui/button';
 
-const lato = Lato({ subsets: ["latin"], weight: "400" });
 const bungee = Bungee({ subsets: ['latin'], weight: "400" });
-const teko = Teko({ subsets: ['latin'], weight: "400" });
-const caveat = Caveat({ subsets: ['latin'], weight: "400" });
+
 const lilita_one = Lilita_One({ subsets: ['latin'], weight: "400" });
-const courgette = Courgette({ subsets: ['latin'], weight: "400" });
-const rubik_Vinyl = Rubik_Vinyl({ subsets: ['latin'], weight: "400" });
-const nerko_one = Nerko_One({ subsets: ['latin'], weight: "400" });
+
 
 const Experiance = () => {
   const data = [
