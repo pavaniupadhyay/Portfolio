@@ -49,9 +49,8 @@ const Experiance = () => {
         </div>
 
         <div className="mt-16 sm:mt-60">
-        <ContainerScroll
-  titleComponent={<></>}
-  children={
+        <ContainerScroll titleComponent={<></>}>
+      
     <div className="bo flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-start ml-10 mt-65">
       {/* Bo's face */}
       <div className="face relative mr-5">
@@ -94,15 +93,17 @@ const Experiance = () => {
       </div>
       <div className={`${lilita_one.className} flex flex-col items-start ml-5 sm:ml-10 space-y-4 sm:space-y-8`}>
         <p className="text-pink-400 text-9xl ml-60 sm:text-x9l font-bold">Contact Me !!</p>
-        <p className="text-white text-lg sm:text-3xl ml-60 font-serif sm:mb-130">"I’ll bring the tech</p>
-        <p className="text-white text-lg sm:text-3xl ml-60 font-serif mb-4 ">You bring the vision—let’s build your website!"</p>
+        <p className="text-white text-lg sm:text-3xl ml-60 font-serif sm:mb-130"> "I&rsquo;ll bring the tech</p>
+        <p className="text-white text-lg sm:text-3xl ml-60 font-serif mb-4 "> You bring the vision&mdash;let&rsquo;s build your website!"</p>
         <div>
           <AnimatedModalDemo />
         </div>
       </div>
     </div>
-  }
-/>
+  
+</ContainerScroll>
+  
+
 
 
 

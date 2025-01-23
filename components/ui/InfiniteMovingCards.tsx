@@ -1,7 +1,8 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 import { Lato } from "next/font/google";
 import { Bungee, Caveat, Courgette, Lilita_One, Nerko_One, Teko } from "@next/font/google";
 
@@ -12,6 +13,7 @@ const teko = Teko({ subsets: ['latin'], weight: "400" });
 const caveat = Caveat({ subsets: ['latin'], weight: "400" });
 const lilita_one = Lilita_One({ subsets: ['latin'], weight: "400" });
 const courgette = Courgette({ subsets: ['latin'], weight: "400" });
+
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
@@ -40,27 +42,26 @@ export const InfiniteMovingCards = ({
 
   const [start, setStart] = useState(false);
 
-  useEffect(() => {
-    addAnimation();
-  }, []);
-
-  function addAnimation() {
+  const addAnimation = useCallback(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
+      if (scrollerRef.current.childElementCount === scrollerContent.length) {
+        // Avoid duplicating if already done
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          if (scrollerRef.current) {
+            scrollerRef.current.appendChild(duplicatedItem);
+          }
+        });
+      }
 
       setAnimationProperties();
       setStart(true);
     }
-  }
+  }, [containerRef, scrollerRef]);
 
-  const setAnimationProperties = () => {
+  const setAnimationProperties = useCallback(() => {
     if (containerRef.current) {
       containerRef.current.style.setProperty(
         "--animation-direction",
@@ -72,7 +73,13 @@ export const InfiniteMovingCards = ({
         speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s"
       );
     }
-  };
+  }, [direction, speed]);
+
+  useEffect(() => {
+    if (!start) {
+      addAnimation();
+    }
+  }, [start, addAnimation]);
 
   return (
     <div
@@ -101,13 +108,15 @@ export const InfiniteMovingCards = ({
             }}
             key={idx}
           >
-            <div className={teko.className} >
+            <div className={teko.className}>
               <div className="flex flex-col items-start">
                 <blockquote className="flex items-center justify-between   /w-full">
                   {item.image && (
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.quote}
+                      width={64} // Adjust width and height
+                      height={64}
                       className={cn(
                         "object-cover",
                         item.imageSize || "h-16 w-16", // Apply custom image size

@@ -2,7 +2,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { GlareCard } from "./ui/glare-card";
-import img4 from "../public/img4.png";
+import Image from 'next/image';
 import { AnimatedTooltip } from "../components/ui/animated-tooltip";
 import { Nerko_One } from "@next/font/google";
 import { Bungee } from "@next/font/google";
@@ -10,6 +10,7 @@ import linkdin from "@/public/ld.png";
 import github from "@/public/githublogo.webp";
 import gmail from "@/public/gmail1.png";
 import X from "@/public/x1.png";
+import img4 from "@/public/img4.png"; // Import the img4 image
  // Import the Contact component
 
 const people = [
@@ -35,10 +36,10 @@ const Hero = () => {
       <div className="mr-500 mt-65 mb-100">
         <div className={Nerko_one.className}>
           <GlareCard className="mr-10  flex flex-row  items-center">
-            <img src={img4.src} alt="Profile" className="h-90" />
+          <Image src={img4} alt="Profile" className="h-90" />
             <div className="ml-5 text-white">
               <h1 className="flex justify-end items-end mr-150 text-8xl mb-4 ">Hyy!! There</h1>
-              <h1 className="text-8xl ml-320 mt-30">It's Pavani</h1>
+              <h1 className="text-8xl ml-320 mt-30">It&#39;s Pavani</h1>
               <p className="text-6xl ml-150 mb-50 mt-50">A Full Stack Developer</p>
               <button className="button-55 mb-100 ml-350" role="button" onClick={handleContactClick}>Contact Me</button>
             </div>

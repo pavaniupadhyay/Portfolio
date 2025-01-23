@@ -21,6 +21,8 @@ import { Lato } from 'next/font/google';
 import { Indie_Flower } from '@next/font/google';
 import { Spicy_Rice } from 'next/font/google';
 import { Noto_Color_Emoji } from '@next/font/google';
+import Image from "next/image";
+
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -192,9 +194,15 @@ const MovingCards = () => {
                     <div
                       className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-gray-500"
                     >
-                      <img src="" alt="" />
+                      
                     </div>
-                    <img src={item.img} alt="cover" className="z-10 absolute bottom-0" />
+                    <Image 
+  src={item.img} 
+  alt="cover" 
+  className="z-10 absolute bottom-0" 
+  width={500} // Adjust width as needed
+  height={300} // Adjust height as needed
+/>
                   </div>
                   <h1 className="font-bold lg:text-2xl md:text-xl text-base pl-3 line-clamp-1">
                     {item.title}
@@ -218,7 +226,13 @@ const MovingCards = () => {
                             transform: `translateX(-${5 * index + 2}px)`,
                           }}
                         >
-                          <img src={icon} alt="icon5" className="p-2" />
+<Image 
+  src={icon} 
+  alt="icon5" 
+  className="p-2" 
+  width={40} // Adjust width as needed
+  height={40} // Adjust height as needed
+/>
                         </div>
                       ))}
                     </div>
